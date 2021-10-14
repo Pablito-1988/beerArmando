@@ -18,6 +18,7 @@ function NavBar() {
           <button  className="dropbtn"><a href="">Contacto</a></button>
           <button  className="dropbtn"><a href="">Nosotros</a></button>
           <button  className="dropbtn"><i class="fas fa-shopping-cart"></i></button>
+          <button  className="dropbtn"><i class="far fa-user"></i></button>
         </nav>
       </header>
     </>
