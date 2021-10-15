@@ -1,0 +1,21 @@
+.greeting{
+    width: 100%;
+    text-align: center;
+    height: 0px;
+    background-color: black;
+    animation-duration: 15s;
+    animation-name: disapear; 
+    animation-iteration-count:1 
+}
+
+@keyframes disapear{
+ 0%{height: 30px;}
+ 50%{height: 30px;}
+ 100%{height: 0px;}
+}
+
+.greeting p{
+    color: white;
+    font-size: 20px;
+}
+
