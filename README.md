@@ -1,8 +1,5 @@
 # El club de la Birra
-Link: [Heroku](https://beer-armando.herokuapp.com/)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Link: [Heroku](https://beer-armando.herokuapp.com/) 
 
 
 
