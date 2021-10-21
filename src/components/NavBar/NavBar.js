@@ -6,7 +6,9 @@ function NavBar() {
   return (
     <>
       <header>
-        <div><img className='logo' src={logo}  alt='logo1'/></div>
+        <div>
+            <img className='logo' src={logo}  alt='logo1'/>
+        </div>
         <nav>
           <div className="dropdown">
             <button className="dropbtn">Categorias</button>
