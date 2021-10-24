@@ -13,7 +13,7 @@ const ItemListContainer = (props) => {
     const [movies,setMovies]=useState({})
 
     useEffect(()=>{
-        fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=space`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=space`)
         .then(response => response.json())
         .then(data => {
             setMovies(
