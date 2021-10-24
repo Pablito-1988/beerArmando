@@ -13,9 +13,8 @@ function NavBar() {
           <div className="dropdown">
             <button className="dropbtn">Categorias</button>
             <div className="dropdown-content">
-              <a href="#">Kits</a>
-              <a href="#">Equipos Completos</a>
-              <a href="#">Insumos</a>
+              <a href="#">Peliculas</a>
+              <a href="#">Cerveza</a>
             </div>
           </div>
           <button  className="dropbtn"><a href="">Contacto</a></button>
