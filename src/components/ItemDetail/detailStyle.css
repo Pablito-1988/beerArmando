@@ -1,0 +1,30 @@
+.detail{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: blanchedalmond;
+}
+
+.detailContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+.detailMovieTitle{
+    margin-top: 20px;
+    font-size:50px
+}
+.description{
+    padding: 10px
+}
+
+.description li{
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style: none;
+}

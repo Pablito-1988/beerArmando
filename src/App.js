@@ -3,6 +3,10 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 /* import ItemCount from "./components/ItemCount/ItemCount"; */
 import Footer from "./components/Footer/Footer";
 
+import { Switch, Route } from 'react-router-dom'
+import Main from "./components/Main/Main";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+
 
 
 const App =() => {
@@ -17,7 +21,18 @@ const App =() => {
     return(
         <>
             <NavBar/>
-            <ItemListContainer greeting={`Hola como te va hoy es ${date}, que tengas un buen dia!`}/>
+                <Switch>
+                    <Route exact path='/'>
+                        {<Main/>}
+                    </Route>
+                    <Route exact path='/movies'>
+                        {<ItemListContainer greeting={`Hola como te va hoy es ${date}, que tengas un buen dia!`}/>}
+                    </Route>
+                    <Route exact path='/movies/:id'>
+                        {<ItemDetailContainer/>}
+                    </Route>
+                    
+                </Switch>
             <Footer/>
         </>
     )

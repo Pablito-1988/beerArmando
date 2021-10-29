@@ -11,6 +11,10 @@ Link: [Heroku](https://beer-armando.herokuapp.com/)https://beer-armando.herokuap
 
 Link: [https://www.omdbapi.com/](https://www.omdbapi.com/)
 
+# Api de Cervezas
+
+Link: [https://punkapi.com/documentation/v2](https://punkapi.com/documentation/v2)
+
 
 
 ### `npm start`
@@ -21,7 +25,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 # Dependencias agregadas 
 
 ### `npm i react-loading`
-Dependecia utilizada para agregar logo de carga, mientras se termina de realizar el fetch
+Dependecia utilizada para agregar logo de carga, mientras se termina de realizar el fetch.\
+
 Link: [https://www.npmjs.com/package/react-loading](https://www.npmjs.com/package/react-loading)
 
 

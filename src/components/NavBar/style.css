@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
 }
 .dropbtn {
     background-color: black;
-    color: white;
+    color: #E50914;
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
+    font-family: 'Bebas Neue', cursive;
 }
 .dropdown {
     position: relative;
@@ -21,12 +23,14 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
 }
 .dropdown-content a {
-    color: white;
+    color: #E50914;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family: 'Bebas Neue', cursive;
 } 
 .dropbtn:hover{background-color: #ffde59;
                 border-radius: 5px;}
@@ -40,8 +44,8 @@
     border-radius: 5px;}
  a{
       text-decoration: none;
-      color: white;
-      font-size: 16px;
+      color: #E50914;
+      font-size: 20px;
   }
  header{
     display: flex;

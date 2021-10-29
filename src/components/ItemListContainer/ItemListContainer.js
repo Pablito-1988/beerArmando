@@ -1,9 +1,8 @@
 import './style.css'
-import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../ItemList/ItemList'
 import { useState } from 'react/cjs/react.development'
 import { useEffect } from 'react'
-import Loading from '../Loading/Loading'
+
 
 
 
@@ -31,7 +30,6 @@ const ItemListContainer = (props) => {
         <div className='greeting'>  
             <p>{greeting}</p>           
         </div>
-        <ItemCount stock='6' initial ='1' onAdd={onAdd()} />
         <ItemList totalMovies={movies}/>
         </>
     )

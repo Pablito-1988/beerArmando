@@ -5,6 +5,8 @@ import Succes from "./Succes";
 const ItemCount = (props) => {
     let stock = Number(props.stock)
     let initial = Number(props.initial)
+    let quote = props.quote
+    let title = props.title
     let [qty,setQty]=useState(initial)
     let [showSucces,setShowSucces]=useState(false)
     
@@ -37,13 +39,13 @@ const ItemCount = (props) => {
     <>
       <div className="formContainer">
         <div className="controls">
-          <p className="productName">Camisa tiger</p>
+          <p className="productName">{title}</p>
           <div className="buttons">
             <button onClick={qtySubs} className="controlButtonAdd">-</button>
             <p className="qty">{qty}</p>
             <button onClick={qtyAdd} className="controlButtonSub">+</button>           
           </div>
-          <button className='addButton' onClick={onAdd} >Agregar al carrito {showSucces && <Succes/>}</button>
+          <button className='addButton' onClick={onAdd} >{quote} {showSucces && <Succes/>}</button>
         </div>
       </div>
     </>

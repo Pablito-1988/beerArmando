@@ -15,7 +15,7 @@
 
 .controls{
     width: 20%;
-    height: 20vh;
+    height: 15vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -79,4 +79,10 @@
     100%{color:rgb(11, 168, 11);
         font-size:0px;}
    }
+
+/* .header-video{
+    width: 1440px;
+    height: 500px;
+}
+ */
 
