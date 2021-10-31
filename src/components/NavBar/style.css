@@ -50,7 +50,7 @@
  header{
     display: flex;
     width: 100%;
-    height: 14vh;
+    height: 13vh;
     background-color: black;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@
  }
  .logo{
       width: 50%;
-      margin: 5px;
+      
  }
  nav{
     display: flex;

@@ -25,10 +25,10 @@ const App =() => {
                     <Route exact path='/'>
                         {<Main/>}
                     </Route>
-                    <Route exact path='/movies'>
+                    <Route  path='/category/:id'>
                         {<ItemListContainer greeting={`Hola como te va hoy es ${date}, que tengas un buen dia!`}/>}
                     </Route>
-                    <Route exact path='/movies/:id'>
+                    <Route  path='/item/:id'>
                         {<ItemDetailContainer/>}
                     </Route>
                     

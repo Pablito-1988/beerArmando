@@ -1,36 +1,44 @@
 import './style.css'
 import ItemList from '../ItemList/ItemList'
-import { useState } from 'react/cjs/react.development'
-import { useEffect } from 'react'
+import { useState,useEffect} from 'react'
+import { useParams } from 'react-router'
+
 
 
 
 
 const ItemListContainer = (props) => {
+    const[category,setCategory] = useState('')
+    let {id} = useParams()
+    useEffect(()=>{
+        setCategory(id)
+    },[id])
+    
+   
+    
     const{greeting}=props
     const apiKey= '2558f221'
-    const [movies,setMovies]=useState({})
+    
+    const [info,setInfo]=useState({})
 
     useEffect(()=>{
-        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=space`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&type=${category}&s=space`)
         .then(response => response.json())
         .then(data => {
-            setMovies(
+            setInfo(
                 data
             )           
         })
-    },[])
+    },[category])
    
-    function onAdd(){
-
-    }
+    
 
     return (
        <> 
         <div className='greeting'>  
             <p>{greeting}</p>           
         </div>
-        <ItemList totalMovies={movies}/>
+        <ItemList titleInfo={id} totalMovies={info}/>
         </>
     )
 }
