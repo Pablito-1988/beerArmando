@@ -1,0 +1,19 @@
+.modalDisplay{
+    color: white;
+    font-size: 0px;
+    margin: 0px;
+    opacity: 0;
+    
+    animation-duration: 10s;
+    animation-name: close;
+    animation-iteration-count:1   
+}
+
+@keyframes close {
+   0%{font-size: 0px;
+opacity: 0;} 
+   50%{font-size: 20px;
+opacity: 1;}
+    100%{font-size: 0px;
+        opacity: 0;}
+}

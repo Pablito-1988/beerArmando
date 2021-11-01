@@ -1,0 +1,111 @@
+.contactContainer{
+    background-image: url('../ItemDetail/backgroundImg.jpg');
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactTitle{
+    margin-top: 0;
+    color: white;
+    font-size: 60px;
+    
+    
+}
+.frase{
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.contact{
+    color: dodgerblue;
+}
+.underline{
+    border: 2px solid dodgerblue;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    animation-duration: 3s;
+    animation-name: grow; 
+    animation-iteration-count:1  
+}
+@keyframes grow {
+    0%{width: 0px;
+        opacity: 0;}
+
+    100%{width: 150px;
+        opacity: 1;}
+}
+
+.contactWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 80vh;
+    border: 1px solid white;
+    border-radius: 5px;
+    
+}
+
+.contactForm{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    flex-direction: column;
+}
+.secondRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+}
+textarea{
+    height: 80px;
+    font-size: 18px;
+        resize: none;
+}
+.nameField{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.textField{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.emailField,.phoneField{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.contactSubmit{
+    width: 15%;
+    height: 4vh;
+    margin-top: 15px;
+    margin-left: 50vw;
+    transition: 0.5s;
+    background-color: dodgerblue;
+    font-size: 20px;
+}
+
+.contactSubmit:hover{
+    background-color: rgb(53, 175, 53);
+    color: white;
+}
+
+input{
+    height: 60px;
+    font-size: 20px;
+}
+label{
+    font-size: 20px;
+    color: white;
+}
+

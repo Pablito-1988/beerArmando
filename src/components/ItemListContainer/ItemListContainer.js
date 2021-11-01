@@ -38,7 +38,9 @@ const ItemListContainer = (props) => {
         <div className='greeting'>  
             <p>{greeting}</p>           
         </div>
+        <div className='listContainer'>
         <ItemList titleInfo={id} totalMovies={info}/>
+        </div>
         </>
     )
 }
