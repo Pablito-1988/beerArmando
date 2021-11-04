@@ -78,11 +78,20 @@
     margin-bottom: 10px;
     cursor: pointer;
 }
+.linkToCart{
+    border: 0;
+    width: 70%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
 
-.addButton:hover{
+.addButton:hover  {
     background-color: #E50914;
     color: white;
 }
+
+
 #check{
     color: rgb(11, 168, 11);
     font-size: 0px;

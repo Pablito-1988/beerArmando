@@ -1,15 +1,14 @@
 import "./style.css";
 import { useState } from "react";
-import Succes from "./Succes";
+/* import Succes from "./Succes"; */
+import { Link } from "react-router-dom";
 
 const ItemCount = (props) => {
   let stock = Number(props.stock);
   let initial = Number(props.initial);
   let quote = props.quote;
   let title = props.title;
-  let movieTitle = props.movieTitle;
   let [qty, setQty] = useState(initial);
-  let [showSucces, setShowSucces] = useState(false);
   let [price, setPrice] = useState(80);
 
   function qtyAdd() {
@@ -24,17 +23,8 @@ const ItemCount = (props) => {
     }
     setPrice(price - 80);
   }
-  function onAdd() {
-    if (qty === 1) {
-      alert(`gracias por alguila ${movieTitle} por ${qty} día`);
-      setShowSucces(true);
-    } else if (qty > 1) {
-      alert(`gracias por alguila ${movieTitle} por ${qty} dias`);
-      setShowSucces(true);
-    } else {
-      alert("por el momento no contamos con stock");
-    }
-  }
+    
+  
 
   return (
     <>
@@ -52,11 +42,11 @@ const ItemCount = (props) => {
               </button>
             </div>
           </div>
-          <spam className="price">Precio por día: $80.00</spam>
+          <p className="price">Precio por día: $80.00</p>
           <h4 className="totalPrice">Total: ${price}.00</h4>
-          <button className="addButton" onClick={onAdd}>
-            {quote} {showSucces && <Succes />}
-          </button>         
+           <Link  className="linkToCart" to={'/cart'}><button className="addButton" onClick={()=>props.onClick({qty})}>
+            {quote} 
+          </button></Link>     
         </div>
       </div>
     </>

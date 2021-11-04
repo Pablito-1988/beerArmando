@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import Main from "./components/Main/Main";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Contacto from "./components/Contacto/Contacto";
+import Cart from "./components/Cart/Cart";
 
 
 
@@ -32,6 +33,9 @@ const App =() => {
                     </Route>
                     <Route exact path='/contacto'>
                         {<Contacto/>}
+                    </Route>
+                    <Route exact path='/cart'>
+                        {<Cart/>}
                     </Route>
                     
                 </Switch>

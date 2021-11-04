@@ -7,12 +7,6 @@ const Item = (props) => {
             <div className="itemContainer">
                 <h4 className='movieTitle'>{titulo}</h4>
                 <NavLink to={`/item/${id}`}><img className='imageCover' src={poster} alt="" /></NavLink>
-                <div className="infoContainer">
-                   <p>AÑO:  {year}</p>
-                   <p>TIPO: {type.toUpperCase()} </p>
-
-                    
-                </div>
             </div>
         </>
     )

@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
             )           
         })
     },[id])
-    console.log(movie)
+    
     if(!movie){
         return (
             <div className='loading'>

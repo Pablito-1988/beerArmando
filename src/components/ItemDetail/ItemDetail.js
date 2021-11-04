@@ -1,8 +1,18 @@
 import "./detailStyle.css";
 import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
 
 const ItemDetail = (props) => {
   const movie = props.movie;
+
+  const[count, setCount] = useState(1);
+  const[showCounter,setShowCounter] = useState(true);
+  const onAdd= (add) => {
+    setCount(add.qty)
+    setShowCounter(false)
+  }
+  
+  console.log(count);
 
   return (
     <article className="detail">
@@ -24,7 +34,7 @@ const ItemDetail = (props) => {
           </ul>
         </section>
       </div>
-        <ItemCount stock='100' initial ='1' quote='Alquilar' movieTitle={movie.Title} title='¿Cuántos días la queres alquilar?'/>
+      {showCounter&& <ItemCount stock='100' initial ='1' quote='Alquilar' onClick={onAdd} movieTitle={movie.Title} title='¿Cuántos días la queres alquilar?'/>}   
     </article>
   );
 };
