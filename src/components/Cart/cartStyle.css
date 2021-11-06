@@ -1,0 +1,91 @@
+.wrapper{
+    
+    display: flex;
+    background-image: url('../ItemDetail/backgroundImg.jpg');
+    flex-direction: column;
+    
+}
+
+.cartWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.cartItem{
+    width: 80%;
+    display: flex;
+    background-color: rgb(250, 250, 245);
+    margin-bottom:  20px;
+    height: 470px;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 1px rgb(0 0 0 / 75%)
+}
+
+.itemInfo{
+    font-size: 25px;
+    padding: 10px;
+}
+
+.itemInfop{
+    margin-bottom: 10px;
+}
+
+.cartFinal{
+    width:50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.innerFinal{
+    color: white;
+    background-color: black;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 10px 1px rgb(0 0 0 / 75%);
+    border-radius: 5px;
+}
+
+.endButton{
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.endButton:hover{
+    background-color: green;
+    color: white;
+}
+
+.delete{
+    width:30%;   
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.delete:hover{
+    background-color: red;
+    color: white;
+}
+
+.finalh3{
+    margin-top: 10px;
+    font-size: 30px;
+}

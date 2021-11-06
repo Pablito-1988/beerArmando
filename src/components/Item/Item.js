@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 
 const Item = (props) => {
-    const {titulo , year, poster, type, id}= props
+    const {titulo, poster, id}= props
     return (
         <>
             <div className="itemContainer">

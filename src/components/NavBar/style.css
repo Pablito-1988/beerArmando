@@ -69,4 +69,15 @@
   }
   i{
       color: #E50914;
-  }  
+  } 
+  
+  #cartLength{
+      color: white;
+      font-size: 16px;
+  }
+
+  .cart-widget{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+  }

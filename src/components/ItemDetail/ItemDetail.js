@@ -1,19 +1,26 @@
 import "./detailStyle.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
+import { useContext } from "react";
+import { useHistory } from "react-router";
+import {CartContext} from "../context/cartContext.js";
+
 
 const ItemDetail = (props) => {
   const movie = props.movie;
-
+   const {push} = useHistory();
   const[count, setCount] = useState(1);
-  const[showCounter,setShowCounter] = useState(true);
+  const {addItem, cart}=useContext(CartContext);
+  
+
   const onAdd= (add) => {
-    setCount(add.qty)
-    setShowCounter(false)
+    addItem(movie, add.qty, add.price)
+    
+    push("/cart");
   }
   
-  console.log(count);
-
+  
+  
   return (
     <article className="detail">
       <h1 className='detailMovieTitle'>{movie.Title}</h1>
@@ -34,7 +41,7 @@ const ItemDetail = (props) => {
           </ul>
         </section>
       </div>
-      {showCounter&& <ItemCount stock='100' initial ='1' quote='Alquilar' onClick={onAdd} movieTitle={movie.Title} title='¿Cuántos días la queres alquilar?'/>}   
+       <ItemCount stock='100' initial ='1' quote='Alquilar' onClick={onAdd} movieTitle={movie.Title} title='¿Cuántos días la queres alquilar?'/>   
     </article>
   );
 };

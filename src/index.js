@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import {BrowserRouter} from 'react-router-dom'
+import CustomeComponent from './components/context/cartContext'
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <CustomeComponent>
+        <App />
+    </CustomeComponent> 
   </BrowserRouter>,
   document.getElementById('root')
 );
 
-/* const App =()=> <p>Hola Mundo</p> */
-
-/* reactDom.render(<App/>,document.getElementById("root")) */

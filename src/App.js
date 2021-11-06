@@ -9,15 +9,13 @@ import Cart from "./components/Cart/Cart";
 
 
 
+
 const App =() => {
     
     let today = new Date(),
    date =  today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
    
 
-   /* function onAdd(){
-
-   } */
     return(
         <>
             <NavBar/>
