@@ -2,6 +2,8 @@ import './style.css'
 import ItemList from '../ItemList/ItemList'
 import { useState,useEffect} from 'react'
 import { useParams } from 'react-router'
+import { useContext } from "react";
+import { CartContext } from "../context/cartContext.js";
 
 
 
@@ -9,12 +11,17 @@ import { useParams } from 'react-router'
 
 const ItemListContainer = (props) => {
     const[category,setCategory] = useState('')
-    let {id} = useParams()
+    let {id } = useParams()
+    
+    const [search,setSearch] = useState('space')
+
+    const { word } = useContext(CartContext)
+    
     useEffect(()=>{
         setCategory(id)
-    },[id])
-    
-   
+        if(word.length> 3){
+        setSearch(word)}
+    },[id,word])
     
     const{greeting}=props
     const apiKey= '2558f221'
@@ -22,14 +29,14 @@ const ItemListContainer = (props) => {
     const [info,setInfo]=useState({})
 
     useEffect(()=>{
-        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&type=${category}&s=space`)
+        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&type=${category}&s=${search}`)
         .then(response => response.json())
         .then(data => {
             setInfo(
                 data
             )           
         })
-    },[category])
+    },[category, search])
    
     
 

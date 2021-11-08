@@ -9,6 +9,8 @@ const { Provider } = CartContext
 const CustomeComponent =({children}) =>{
 
     const [cart, setCart] = useState([])
+    const [word, setWord] = useState("space")
+    console.log(word)
     
     //agrega elementos al carrito
     const addItem = (product,cantidad, precio) =>{
@@ -30,19 +32,26 @@ const CustomeComponent =({children}) =>{
     const clear=()=>{
         setCart([])
     }
-    //chequea que si el producto ya esta en el carrito
+    //chequea que si el pr
     const isInCart = (product) =>{
         const existe = cart.filter(item => item.Producto.imdbID === product.imdbID)
         return existe
+    }
+    const search = (word) =>{
+        setWord(word)
+        console.log(word)
+
     }
 
 
 
     const cartContextValue = {
          cart : cart,
+         word : word,
          addItem : addItem,
          clear : clear,
          removeItem : removeItem,
+         search : search,
     } 
     return(
         <Provider value={cartContextValue}>

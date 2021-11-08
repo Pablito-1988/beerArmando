@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useEffect, useState } from "react/cjs/react.development";
 import {CartContext} from "../context/cartContext.js";
 import ItemQty from "./ItemQty.js";
+import { Link } from "react-router-dom";
 
 
 const CartWidget = () => {
@@ -20,7 +21,7 @@ const CartWidget = () => {
     return (
         <>
             <div className="cart-widget">
-                <button  className="dropbtn"><i className="fas fa-shopping-cart"></i></button>
+                <Link to={'/cart'} className="dropbtn"><i className="fas fa-shopping-cart"></i></Link>
                <ItemQty number ={number}/> 
             </div>
         </>

@@ -21,7 +21,7 @@ function NavBar() {
           <button  className="dropbtn"><Link to="/contacto">Contacto</Link></button>
           <button  className="dropbtn"><Link to="/contacto">Nosotros</Link></button>
           <CartWidget/>
-          <button  className="dropbtn"><i className="far fa-user"></i></button>
+           <button  className="dropbtn"><i className="far fa-user"></i></button>
         </nav>
       </header>
     </>
