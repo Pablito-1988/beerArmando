@@ -89,7 +89,7 @@
   }
 
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
       nav {
           display: none;
       }
