@@ -16,3 +16,25 @@ video{
     font-size: 2.5em;
     color: #fff;
 }
+
+.mainResponsive{
+    width: 100%;
+    height: 100vh;
+    display: none
+}
+.backgroundImage{
+    width: 100%;
+    height: 100vh;
+}
+
+@media (max-width: 375px) {
+    .video{
+        display:none
+    }
+    .mainResponsive{
+        display: block;
+    }
+    .mainQuote{
+        color: red
+    }
+}

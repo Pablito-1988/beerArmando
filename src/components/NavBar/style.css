@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: 'Bebas Neue', cursive;
 }
+
+
 .dropbtn {
     background-color: black;
     color: #E50914;
@@ -80,4 +82,49 @@
     display: flex;
     flex-direction: row;
     align-items: center
+  }
+  .responsive{
+      
+      display: none;
+  }
+
+
+  @media (max-width: 375px) {
+      nav {
+          display: none;
+      }
+      .fa-film::after{
+          font-size: 20px;
+      }
+      .logo{
+          width: 100%;
+      }
+      
+       
+      
+      .responsive{
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+      }
+      .dropdown-content{
+        min-width: 160px;
+      }
+      .dropbtn:hover{
+          background-color: black;
+      }
+      .dropdown-content a:hover{
+        background-color: black
+      }
+      .dropdown:hover .dropbtn{
+            background-color: black;
+            padding-right: 5px;
+            border: 0;
+      }
+      .responsiveButton{
+          border: 0;
+          padding: 0;
+      }
+      
+      
   }

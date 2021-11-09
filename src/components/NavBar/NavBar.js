@@ -6,11 +6,24 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <>
-      <header>
+      <header id='pcScreen'>
         <div>
           <Link  to='/' > <img className='logo' src={logo}  alt='logo1'/></Link>
         </div>
-        <nav>
+        <div className='responsive' >
+        <div className="dropdown">
+            <button className="dropbtn"><i class="fas fa-bars"></i></button>
+            <div className="dropdown-content">
+              <Link className="dropbtn" to="/category/movie">Peliculas</Link>
+              <Link className="dropbtn" to="/category/series">Series</Link>
+              <Link className="dropbtn" to="/contacto">Contacto</Link>
+              <Link className="dropbtn" to="/contacto">Nosotros</Link>
+              <button  className="dropbtn"><i className="far fa-user"></i></button>
+            </div>
+          </div>
+          <CartWidget/> 
+        </div>
+        <nav >
           <div className="dropdown">
             <button className="dropbtn">Categorias</button>
             <div className="dropdown-content">

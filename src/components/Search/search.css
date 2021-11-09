@@ -28,3 +28,9 @@
     border-bottom-right-radius: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 375px){
+    #searchBar{
+        width: 300px;
+    }
+}

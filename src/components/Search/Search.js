@@ -13,7 +13,7 @@ const Search = (params) => {
     const { search }=useContext(CartContext)
 
     const keyWord = useRef()
-    
+
     function searchWord (e){
         e.preventDefault()
         search(keyWord.current.value) 
@@ -23,7 +23,7 @@ const Search = (params) => {
     return (
         <div className='search'>
             <form action=""onSubmit={searchWord}>
-            <input id='searchBar' ref={keyWord}  placeholder={`  Busca lo que mas te guste de ${category}`}  type="search" />
+            <input id='searchBar' ref={keyWord}  placeholder={`  Busca las ${category} que mas te gusten.`}  type="search" />
             <button className='searchButton'   type='submit'><i className="fas fa-search"></i></button> 
             </form>
         </div>
