@@ -2,6 +2,8 @@ import "./cartStyle.css";
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext.js";
 import CartCounter from "./CartCounter";
+import emptyImg from "./emptyImg.jpg"
+import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
   const { cart , clear, removeItem } = useContext(CartContext);
@@ -14,12 +16,15 @@ const Cart = () => {
     const totalPrice = total.reduce((acc, curr) => acc + curr, 0)
     const totalDias = dias.reduce((acc, curr) => acc + curr, 0)
     
+
   return (
     <>
     <div className="wrapper">
         <h1 className='pageTitle'>Estas pelis estan a un paso de ser tuyas</h1>
       <div className="cartWrapper">
-        <div className="cart">
+        {cart.length > 0 ?
+        <> 
+         <div className="cart">
         {cart.map((item,i) => {
           return (
             <div key={i} className="cartItem">
@@ -35,9 +40,10 @@ const Cart = () => {
               </div>
             </div>
           );
-        })}
+          })}
         </div>
-      <CartCounter totalDias={totalDias} total={totalPrice} onClickClear ={clear} />
+        <CartCounter totalDias={totalDias} total={totalPrice} onClickClear ={clear} />
+        </> : <EmptyCart/>}
       </div>
     </div>
     </>

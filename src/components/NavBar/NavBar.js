@@ -2,8 +2,11 @@ import "./style.css";
 import logo from './logo.jpg'
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function NavBar() {
+    let screen = window.innerWidth;
+    console.log(screen);
   return (
     <>
       <header id='pcScreen'>
