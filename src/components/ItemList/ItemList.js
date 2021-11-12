@@ -2,10 +2,8 @@ import Item from "../Item/Item"
 import Loading from "../Loading/Loading"
 import Search from "../Search/Search"
 
-const ItemList = (props) => {
-    
+const ItemList = (props) => {   
     const movies = props.totalMovies.Search
-    console.log(movies)
     let title = props.titleInfo
     title==='movie'?title='Peliculas':title='Series'
     
