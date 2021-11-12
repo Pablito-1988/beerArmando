@@ -32,6 +32,7 @@ const ItemListContainer = (props) => {
         fetch(`https://www.omdbapi.com/?apikey=${apiKey}&type=${category}&s=${search}`)
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             setInfo(
                 data
             )           

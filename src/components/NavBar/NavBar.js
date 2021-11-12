@@ -2,11 +2,10 @@ import "./style.css";
 import logo from './logo.jpg'
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+/* import { useEffect } from "react"; */
 
 function NavBar() {
-    let screen = window.innerWidth;
-    console.log(screen);
+  
   return (
     <>
       <header id='pcScreen'>
@@ -15,7 +14,7 @@ function NavBar() {
         </div>
         <div className='responsive' >
         <div className="dropdown">
-            <button className="dropbtn"><i class="fas fa-bars"></i></button>
+            <button className="dropbtn"><i className="fas fa-bars"></i></button>
             <div className="dropdown-content">
               <Link className="dropbtn" to="/category/movie">Peliculas</Link>
               <Link className="dropbtn" to="/category/series">Series</Link>

@@ -8,9 +8,9 @@ import { CartContext } from "../context/cartContext.js";
 const ItemDetail = (props) => {
   const movie = props.movie;
   const { push } = useHistory();
-  const [count, setCount] = useState(1);
+  /* const [count, setCount] = useState(1); */
   const [mostrar, setMostrar] = useState(false);
-  const { addItem, cart } = useContext(CartContext);
+  const { addItem} = useContext(CartContext);
 
   const onAdd = (add) => {
     addItem(movie, add.qty, add.price);

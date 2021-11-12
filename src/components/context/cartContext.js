@@ -10,7 +10,7 @@ const CustomeComponent =({children}) =>{
 
     const [cart, setCart] = useState([])
     const [word, setWord] = useState("space")
-    
+    console.log(cart)
     
     //agrega elementos al carrito
     const addItem = (product,cantidad, precio) =>{

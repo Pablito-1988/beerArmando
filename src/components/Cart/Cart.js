@@ -2,7 +2,7 @@ import "./cartStyle.css";
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext.js";
 import CartCounter from "./CartCounter";
-import emptyImg from "./emptyImg.jpg"
+/* import emptyImg from "./emptyImg.jpg" */
 import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
