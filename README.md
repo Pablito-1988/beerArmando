@@ -5,7 +5,9 @@ Contamos con un amplio catálogo íntegramente en formato VHS.
 
 ![Main](Main.jpg)
 
-Link: [https://beer-armando.herokuapp.com/](https://beer-armando.herokuapp.com/)
+Link: Rama Master, que obtiene los datos de Firebase [https://beer-armando.vercel.app/](https://beer-armando.vercel.app/)
+
+Link: Rama Api, que obtiene los datos de la Api [https://beer-armando.herokuapp.com/](https://beer-armando.herokuapp.com/)
 
 
 
