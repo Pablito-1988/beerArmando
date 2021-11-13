@@ -28,8 +28,8 @@ const ItemListContainer = (props) => {
   if (info) {
     info.filter((item) => {
       if (item.Type === id) {
-     return (filter.push(item))
-      }
+      filter.push(item)
+      } return item;
     });
   }
 
