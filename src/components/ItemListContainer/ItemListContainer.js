@@ -1,56 +1,48 @@
-import './style.css'
-import ItemList from '../ItemList/ItemList'
-import { useState,useEffect} from 'react'
-import { useParams } from 'react-router'
-import { useContext } from "react";
-import { CartContext } from "../context/cartContext.js";
-
-
-
-
+import "./style.css";
+import ItemList from "../ItemList/ItemList";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import { firestore } from "../../firebase";
 
 const ItemListContainer = (props) => {
-    const[category,setCategory] = useState('')
-    let {id } = useParams()
-    
-    const [search,setSearch] = useState('space')
+  let { id } = useParams();
+  const [info, setInfo] = useState(null);
+  const { greeting } = props;
 
-    const { word } = useContext(CartContext)
-    
-    useEffect(()=>{
-        setCategory(id)
-        if(word.length> 3){
-        setSearch(word)}
-    },[id,word])
-    
-    const{greeting}=props
-    const apiKey= '2558f221'
-    
-    const [info,setInfo]=useState({})
+  useEffect(() => {
+    const prom = firestore.collection("productos").get();
+    prom
+      .then((documento) => {
+        setInfo(
+          documento.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          })
+        );
+      })
+      .catch(() => {
+        console.log("error");
+      });
+  }, [id]);
 
-    useEffect(()=>{
-        fetch(`https://www.omdbapi.com/?apikey=${apiKey}&type=${category}&s=${search}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            setInfo(
-                data
-            )           
-        })
-    },[category, search])
-   
-    
+  const filter = [];
+  if (info) {
+    info.filter((item) => {
+      if (item.Type === id) {
+     return (filter.push(item))
+      }
+    });
+  }
 
-    return (
-       <> 
-        <div className='greeting'>  
-            <p>{greeting}</p>           
-        </div>
-        <div className='listContainer'>
-        <ItemList titleInfo={id} totalMovies={info}/>
-        </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="greeting">
+        <p>{greeting}</p>
+      </div>
+      <div className="listContainer">
+        <ItemList titleInfo={id} totalMovies={filter} />
+      </div>
+    </>
+  );
+};
 
-export default ItemListContainer
+export default ItemListContainer;
