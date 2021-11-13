@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import {CartContext} from "../context/cartContext.js";
 import ItemQty from "./ItemQty.js";
 import { Link } from "react-router-dom";
