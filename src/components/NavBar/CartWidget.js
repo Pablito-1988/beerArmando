@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
 
     const {cart} = useContext(CartContext);
-    const [number,setNumber]= useState(cart.length)
+    
+    const [number,setNumber]= useState(0)
     
     
    
