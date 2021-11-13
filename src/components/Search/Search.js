@@ -1,5 +1,5 @@
 
-import { useRef } from 'react/cjs/react.development'
+import { useRef } from 'react'
 import './search.css'
 import { useContext } from "react";
 import { CartContext } from "../context/cartContext.js";

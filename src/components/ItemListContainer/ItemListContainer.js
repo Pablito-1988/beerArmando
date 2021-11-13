@@ -20,7 +20,7 @@ const ItemListContainer = (props) => {
         );
       })
       .catch(() => {
-        console.log("error");
+        console.log("no se cumplió la promesa");
       });
   }, [id]);
 
