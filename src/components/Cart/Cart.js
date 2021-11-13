@@ -36,7 +36,7 @@ const Cart = () => {
                 <p className='itemInfop'>Descripcion:{item.Producto.Plot}</p>
                 <p className='itemInfop'>Precio: ${item.Precio}.</p>
                 <p className='itemInfop'>Total de dias con esta peli: {item.Cantidad}.</p>
-                <button className='delete' onClick={()=>removeItem(item.Producto.imdbID)}>Eliminar de la lista</button>
+                <button className='delete' onClick={()=>removeItem(item.Producto.id)}>Eliminar de la lista</button>
               </div>
             </div>
           );

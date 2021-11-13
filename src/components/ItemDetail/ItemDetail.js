@@ -7,7 +7,7 @@ import { CartContext } from "../context/cartContext.js";
 
 const ItemDetail = (props) => {
   const movie = props.movie;
-
+  console.log(movie)
   const { push } = useHistory();
   /* const [count, setCount] = useState(1); */
   const [mostrar, setMostrar] = useState(false);

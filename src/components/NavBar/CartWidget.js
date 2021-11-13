@@ -9,9 +9,7 @@ const CartWidget = () => {
 
     const {cart} = useContext(CartContext);
     
-    const [number,setNumber]= useState(0)
-    
-    
+    const [number,setNumber] = useState(cart.length)
    
     useEffect(()=>{
         setNumber(cart.length)

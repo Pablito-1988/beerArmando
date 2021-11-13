@@ -11,9 +11,10 @@ const CustomeComponent =({children}) =>{
     const [cart, setCart] = useState([])
     const [word, setWord] = useState("space")
     
-    
+    console.log(cart)
     //agrega elementos al carrito
     const addItem = (product,cantidad, precio) =>{
+        console.log(product + " " + cantidad + " " + precio) 
         const item = isInCart(product)
        if(item>=0){
         setCart([...cart,{Producto:product,Cantidad:cantidad, Precio:precio}])
@@ -24,7 +25,7 @@ const CustomeComponent =({children}) =>{
     }
     //elmina elementos del carrito
     const removeItem = (itemId) =>{
-        setCart(cart.filter((item)=> item.Producto.imdbID !== itemId))
+        setCart(cart.filter((item)=> item.Producto.id !== itemId))
         
 
     }
@@ -34,7 +35,8 @@ const CustomeComponent =({children}) =>{
     }
     //chequea que si el pr
     const isInCart = (product) =>{
-        const existe = cart.filter(item => item.Producto.imdbID === product.imdbID)
+        console.log(product)
+        const existe = cart.filter(item => item.Producto.id === product.id)
         return existe
     }
     const search = (word) =>{

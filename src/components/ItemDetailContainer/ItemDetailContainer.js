@@ -8,12 +8,12 @@ import { firestore } from '../../firebase';
 const ItemDetailContainer = () => {
     const { id } = useParams()
     const [movie,setMovie]=useState(null)
-
+    
     useEffect(()=>{
         const  prom = firestore.collection('productos').doc(id).get()
         prom.then(doc=>{
             if(doc.exists){
-                setMovie(doc.data())
+                setMovie( {id: id , ...doc.data()})
             }
         }) 
 
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
     }else{
     return (
         <div>
-           <ItemDetail movie ={movie}/>
+           <ItemDetail movie ={movie} />
         </div>
     )
     }
