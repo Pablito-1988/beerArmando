@@ -25,6 +25,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    background-image: url(../ItemDetail/backgroundImg.jpg);
 }
 
 .greeting p{
@@ -53,6 +54,14 @@
     margin-bottom: 20px;
     background-color: rgb(230, 240, 240);
     border-radius: 10px;
+    
+}
+.errorSearch{
+    height: 100vh;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    color: yellow;
     
 }
 

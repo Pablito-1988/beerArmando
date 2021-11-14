@@ -19,14 +19,14 @@ const ItemListContainer = (props) => {
     
     useEffect(()=>{
         setCategory(id)
-        if(word.length> 3){
-        setSearch(word)}
+        setSearch(word)
     },[id,word])
     
     const{greeting}=props
     const apiKey= '2558f221'
     
     const [info,setInfo]=useState({})
+     
 
     useEffect(()=>{
         fetch(`https://www.omdbapi.com/?apikey=${apiKey}&type=${category}&s=${search}`)

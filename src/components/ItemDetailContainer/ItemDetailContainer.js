@@ -7,7 +7,7 @@ import Loading from "../Loading/Loading"
 const ItemDetailContainer = () => {
     const { id } = useParams()
     const apiKey= '2558f221'
-    const [movie,setMovie]=useState({})
+    const [movie,setMovie]=useState(null)
 
     useEffect(()=>{
         fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
