@@ -43,9 +43,9 @@ const ItemListContainer = (props) => {
 
     return (
        <> 
-        <div className='greeting'>  
+       {/*  <div className='greeting'>  
             <p>{greeting}</p>           
-        </div>
+        </div> */}
         <div className='listContainer'>
         <ItemList titleInfo={id} totalMovies={info}/>
         </div>

@@ -22,6 +22,7 @@
 .loading{
     display: flex;
     width: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -54,7 +55,11 @@
     margin-bottom: 20px;
     background-color: rgb(230, 240, 240);
     border-radius: 10px;
-    
+    transition: 1s;  
+}
+.itemContainer:hover{
+    transform: scale(1.06);
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.5);
 }
 .errorSearch{
     height: 100vh;
