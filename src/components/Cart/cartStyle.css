@@ -50,7 +50,7 @@
 .innerFinal{
     color: white;
     background-color: black;
-    width: 37%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,4 +101,8 @@
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.itemImg{
+    width:100%
 }

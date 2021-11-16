@@ -28,6 +28,7 @@ video{
     opacity: 0.5;
 }
 
+
 @media (max-width: 425px) {
     .video{
         display:none

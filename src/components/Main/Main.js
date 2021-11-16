@@ -1,6 +1,7 @@
 import video from "./background.mp4";
 import "./mainStyle.css";
 import background from "./backgroundImage.jpg";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
