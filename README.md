@@ -39,6 +39,10 @@ Dependecia utilizada para el envio de mails para la sección de contacto.
 
 Link: [https://www.emailjs.com/docs/](https://www.emailjs.com/docs/)
 
+### `npm install formik --save`
+Dependecia utilizada para el manejo de formularios de la sección de login y de carrito.
+
+Link: [https://formik.org/docs/overview](https://formik.org/docs/overview)
 
 
 

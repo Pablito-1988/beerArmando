@@ -1,9 +1,10 @@
 import "./cartStyle.css";
-import { useContext } from "react";
+import { useContext ,useState } from "react";
 import { CartContext } from "../context/cartContext.js";
 import CartCounter from "./CartCounter";
 /* import emptyImg from "./emptyImg.jpg" */
 import EmptyCart from "./EmptyCart";
+import { firestore } from "../../firebase";
 
 const Cart = () => {
   const { cart , clear, removeItem } = useContext(CartContext);
@@ -15,6 +16,37 @@ const Cart = () => {
     })
     const totalPrice = total.reduce((acc, curr) => acc + curr, 0)
     const totalDias = dias.reduce((acc, curr) => acc + curr, 0)
+
+    const [user, setUser] = useState(null)
+    
+    function userData(data){
+      
+      setUser(data)
+    }
+    let today = new Date(),
+   date =  today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+
+    const order ={
+      buyer: user,
+      items : cart,
+      date :  date,
+      total : total[0]
+    }
+    
+
+    function sendOrder(){
+        firestore.collection("orders").add(order)
+        .then((data)=>{
+          console.log("se creo la orden")
+          console.log(data.id)
+        })
+        .catch(err=>{
+          console.log(err)
+        })
+
+      
+    }
+    
     
 
   return (
@@ -36,13 +68,13 @@ const Cart = () => {
                 <p className='itemInfop'>Descripcion:{item.Producto.Plot}</p>
                 <p className='itemInfop'>Precio: ${item.Precio}.</p>
                 <p className='itemInfop'>Total de dias con esta peli: {item.Cantidad}.</p>
-                <button className='delete' onClick={()=>removeItem(item.Producto.id)}>Eliminar de la lista</button>
+                <button className='deleteObjet' onClick={()=>removeItem(item.Producto.id)}>Eliminar de la lista  <i id='trash' className="far fa-trash-alt"></i></button>
               </div>
             </div>
           );
           })}
         </div>
-        <CartCounter totalDias={totalDias} total={totalPrice} onClickClear ={clear} />
+        <CartCounter totalDias={totalDias} total={totalPrice} sendOrder={sendOrder} userData={userData} onClickClear ={clear} />
         </> : <EmptyCart/>}
       </div>
     </div>

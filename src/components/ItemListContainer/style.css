@@ -5,8 +5,9 @@
     opacity: 0;
     background-color: black;
     animation-duration: 15s;
-    animation-name: disapear; 
-    animation-iteration-count:1 
+    /* animation-name: disapear;  */
+    animation-iteration-count:1 ;
+    display: none;
 }
 .listContainer{
     background-image: url(../ItemDetail/backgroundImg.jpg);

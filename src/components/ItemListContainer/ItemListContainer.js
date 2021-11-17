@@ -6,11 +6,12 @@ import { firestore } from "../../firebase";
 
 const ItemListContainer = (props) => {
   let { id } = useParams();
-  const [info, setInfo] = useState(null);
+  const [info, setInfo] = useState([]);
   const { greeting } = props;
 
   useEffect(() => {
-    const prom = firestore.collection("productos").get();
+    const prom = firestore.collection("productos").where('Type','==',id).get();
+    
     prom
       .then((documento) => {
         setInfo(
@@ -24,22 +25,14 @@ const ItemListContainer = (props) => {
       });
   }, [id]);
 
-  const filter = [];
-  if (info) {
-    info.filter((item) => {
-      if (item.Type === id) {
-      filter.push(item)
-      } return item;
-    });
-  }
-
+ 
   return (
     <>
       <div className="greeting">
         <p>{greeting}</p>
       </div>
       <div className="listContainer">
-        <ItemList titleInfo={id} totalMovies={filter} />
+        <ItemList titleInfo={id} totalMovies={info} />
       </div>
     </>
   );
