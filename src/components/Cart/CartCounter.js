@@ -5,11 +5,16 @@ const CartCounter = (props) => {
   
   const form = useRef()
   const moreButton = useRef()
+  const purchaseButton = useRef()
 
   function showForm(){
     form.current.style = "display: flex"
     moreButton.current.style = "display: none"
   }
+  function sendData (){
+    props.sendOrder()
+  }
+  
 
   return (
     <div className="cartFinal">
@@ -36,9 +41,10 @@ const CartCounter = (props) => {
             return errors;
           }}
           onSubmit={(values) => {
-            
             props.userData(values);
-            props.sendOrder()
+            form.current.style = "display: none"
+            purchaseButton.current.style = "display: block"
+           
           }}
         >
           {({ handleChange }) => (
@@ -47,7 +53,7 @@ const CartCounter = (props) => {
                 <label>Nombre</label>
                 <input
                   type="text"
-                  placeholder="Nombre"
+                  placeholder="Ej: Jose Feliz Pelota"
                   onChange={handleChange}
                   name="nombre"
                   id="user"
@@ -63,7 +69,7 @@ const CartCounter = (props) => {
                 <label>Email</label>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Ej: jose_pelota@gmail.com"
                   onChange={handleChange}
                   name="email"
                   className="inputForm"
@@ -76,7 +82,7 @@ const CartCounter = (props) => {
                 <label>Teléfono</label>
                 <input
                   type="number"
-                  placeholder="Password"
+                  placeholder="Ej: 761-1143"
                   onChange={handleChange}
                   name="telefono"
                   className="inputForm"
@@ -87,15 +93,21 @@ const CartCounter = (props) => {
                   component="span"
                 />
                 <button type="submit" className="endButton">
-                  Finalizar
+                  Confirmar datos
                 </button>
               </div>
             </Form>
           )}
         </Formik>
         <button className="delete" ref={moreButton} onClick={showForm}>
-        Cliqueá acá para finalizar la compra
+        Para finalizar agrega tus datos
         </button>
+        <div className='purchase' ref={purchaseButton} >
+          <p>Datos verificados   <i id='dataVerify' className="far fa-check-circle"></i></p>
+          <button className='purchaseButton'  onClick={sendData} >
+          Finalizar compra  
+        </button>
+        </div>
         <button className="delete" onClick={props.onClickClear}>
           Vaciar carrito
         </button>

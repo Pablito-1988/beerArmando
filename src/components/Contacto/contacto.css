@@ -5,6 +5,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    
 }
 
 .contactTitle{
@@ -16,15 +17,15 @@
 }
 .frase{
     color: white;
-    font-size: 18px;
+    font-size: 35px;
     margin-top: 15px;
 }
 .contact{
-    color: dodgerblue;
+    color: #E50914;
 }
 .underline{
-    border: 2px solid dodgerblue;
-    width: 150px;
+    border: 2px solid #E50914;
+    width: 600px;
     text-align: center;
     margin: 0 auto;
     animation-duration: 3s;
@@ -35,7 +36,7 @@
     0%{width: 0px;
         opacity: 0;}
 
-    100%{width: 150px;
+    100%{width: 600px;
         opacity: 1;}
 }
 
@@ -46,7 +47,6 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     height: 80vh;
-    border: 1px solid white;
     border-radius: 5px;
     
 }
@@ -73,16 +73,24 @@ textarea{
     display: flex;
     flex-direction: column;
     width: 90%;
+    
 }
 .textField{
     width: 90%;
     display: flex;
     flex-direction: column;
+    
 }
 .emailField,.phoneField{
     display: flex;
     flex-direction: column;
     width: 45%;
+    
+}
+.fullName , .emailInput , .phone , .text {
+    height: 45px;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .contactSubmit{
@@ -91,8 +99,11 @@ textarea{
     margin-top: 15px;
     margin-left: 50vw;
     transition: 0.5s;
-    background-color: dodgerblue;
+    background-color: #E50914;
+    color: white;
     font-size: 20px;
+    border-radius: 5px;
+    border: 0;
 }
 
 .contactSubmit:hover{
@@ -105,7 +116,7 @@ textarea{
     font-size: 20px;
 } */
 label{
-    font-size: 20px;
+    font-size: 35px;
     color: white;
 }
 

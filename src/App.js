@@ -34,8 +34,7 @@ const App =() => {
                     </Route>
                     <Route exact path='/cart'>
                         {<Cart/>}
-                    </Route>
-                    
+                    </Route> 
                 </Switch>
             <Footer/>
         </>
