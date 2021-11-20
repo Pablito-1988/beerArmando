@@ -11,7 +11,7 @@ const Cart = () => {
   console.log(cartItems); 
   const total = []
     const dias= []
-    cart.forEach(item => {
+    cartItems.forEach(item => {
         total.push(item.Precio)
         dias.push(item.Cantidad)
     })
