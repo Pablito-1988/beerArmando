@@ -20,9 +20,10 @@ const CartWidget = () => {
             <div className="cart-widget">
                 <div className="dropdown">
                 <Link to={'/cart'} className="dropbtn"><i className="fas fa-shopping-cart"></i></Link>
-                <div className="cartdropdown-content">
+                {cart.length > 0 ?<div className="cartdropdown-content">
                     <p className='previewTitle'>Esto es lo que tenes en el carrito hasta ahora:</p>
-                    <ul>   
+                    <ul> 
+
                         {cart.map((item,index)=>{ 
                             return <li className="dropbtn" >
                                 <div className='cartPreview'>
@@ -37,7 +38,8 @@ const CartWidget = () => {
                                 </li>
                         })}
                     </ul>
-                </div>
+                </div>:''}
+                
                 </div>
                <ItemQty number ={number}/> 
             </div>
