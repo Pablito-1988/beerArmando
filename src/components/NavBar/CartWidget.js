@@ -7,24 +7,24 @@ import { Link } from "react-router-dom";
 
 const CartWidget = () => {
 
-    const {cart, clear,removeItem } = useContext(CartContext);
+    const {cartItems ,removeItem } = useContext(CartContext);
     
-    const [number,setNumber] = useState(cart.length)
-    console.log(cart)
+    const [number,setNumber] = useState(cartItems.length)
+    console.log(cartItems)
     useEffect(()=>{
-        setNumber(cart.length)
-    },[cart])
+        setNumber(cartItems.length)
+    },[cartItems])
     
     return (
         <>
             <div className="cart-widget">
                 <div className="dropdown">
                 <Link to={'/cart'} className="dropbtn"><i className="fas fa-shopping-cart"></i></Link>
-                {cart.length > 0 ?<div className="cartdropdown-content">
+                {cartItems.length > 0 ?<div className="cartdropdown-content">
                     <p className='previewTitle'>Esto es lo que tenes en el carrito hasta ahora:</p>
                     <ul> 
 
-                        {cart.map((item,index)=>{ 
+                        {cartItems.map((item,index)=>{ 
                             return <li className="dropbtn" >
                                 <div className='cartPreview'>
                                     <img className='cartListImg' src={item.Producto.Poster} alt="" />

@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { createContext } from "react";
+import { useLocalStorage } from "../../Hooks/useLocalStorage";
 
 export const CartContext = createContext()
 
@@ -10,7 +11,8 @@ const CustomeComponent =({children}) =>{
 
     const [cart, setCart] = useState([])
     const [word, setWord] = useState("space")
-    
+    const [cartItems, setCartItems] = useLocalStorage("cartItems", [])
+    console.log(cartItems)
     
     //agrega elementos al carrito
     const addItem = (product,cantidad, precio) =>{
@@ -18,7 +20,8 @@ const CustomeComponent =({children}) =>{
         const item = isInCart(product)
        if(item>=0){
         setCart([...cart,{Producto:product,Cantidad:cantidad, Precio:precio}])
-       }
+        setCartItems([...cartItems,{Producto:product,Cantidad:cantidad, Precio:precio}]) 
+    }
             
         
        
@@ -26,12 +29,13 @@ const CustomeComponent =({children}) =>{
     //elmina elementos del carrito
     const removeItem = (itemId) =>{
         setCart(cart.filter((item)=> item.Producto.id !== itemId))
-        
+        setCartItems((cart.filter((item)=> item.Producto.id !== itemId)))
 
     }
     //elimina todos los elementos del carrito 
     const clear=()=>{
         setCart([])
+        setCartItems([])
     }
     //chequea que si el pr
     const isInCart = (product) =>{
@@ -49,6 +53,7 @@ const CustomeComponent =({children}) =>{
 
     const cartContextValue = {
          cart : cart,
+         cartItems : cartItems,
          word : word,
          addItem : addItem,
          clear : clear,

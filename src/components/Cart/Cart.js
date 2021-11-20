@@ -7,8 +7,9 @@ import EmptyCart from "./EmptyCart";
 import { firestore } from "../../firebase";
 
 const Cart = () => {
-  const { cart , clear, removeItem } = useContext(CartContext);
-    const total = []
+  const { cart ,cartItems , clear, removeItem } = useContext(CartContext);
+  console.log(cartItems); 
+  const total = []
     const dias= []
     cart.forEach(item => {
         total.push(item.Precio)
@@ -59,18 +60,18 @@ const Cart = () => {
       <div className="wrapper">
           <h1 className='pageTitle'>Estas pelis estan a un paso de ser tuyas</h1>
         <div className="cartWrapper">
-          {cart.length > 0 ?
+          {cartItems.length > 0 ?
           <> 
            <div className="cart">
-          {cart.map((item,i) => {
+          {cartItems.map((item,i) => {
             return (
               <div key={i} className="cartItem">
                 <div className="itemImg">
                 <img className='imageCover' src={item.Producto.Poster} alt="" />
                 </div>
                 <div className="itemInfo">
-                  <h3>Titulo:{item.Producto.Title}</h3>
-                  <p className='itemInfop'>Descripcion:{item.Producto.Plot}</p>
+                  <h3>Titulo: {item.Producto.Title}</h3>
+                  <p className='itemInfop'>Descripcion: {item.Producto.Plot}</p>
                   <p className='itemInfop'>Precio: ${item.Precio}.</p>
                   <p className='itemInfop'>Total de dias con esta peli: {item.Cantidad}.</p>
                   <button className='deleteObjet' onClick={()=>removeItem(item.Producto.id)}>Eliminar de la lista  <i id='trash' className="far fa-trash-alt"></i></button>
