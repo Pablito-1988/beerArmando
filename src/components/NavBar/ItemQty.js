@@ -9,7 +9,10 @@ const ItemQty = (props) => {
    }else{
     return (
         <>
-            <p id="cartLength">({`${props.number}`})</p>
+            
+              <p className="cartLength">({`${props.number}`})</p>  
+          
+            
         </>
     )
    }
