@@ -38,7 +38,6 @@ const Cart = () => {
     function sendOrder(){
         firestore.collection("orders").add(order)
         .then((data)=>{
-          console.log("se creo la orden")
           setOrderId(data.id)
           clear()
         })

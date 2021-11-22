@@ -6,6 +6,8 @@ import Main from "./components/Main/Main";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
 import Contacto from "./components/Contacto/Contacto";
 import Cart from "./components/Cart/Cart";
+import Login from "./components/Login/Login";
+import NewUser from "./components/Login/NewUser";
 
 
 
@@ -34,7 +36,13 @@ const App =() => {
                     </Route>
                     <Route exact path='/cart'>
                         {<Cart/>}
-                    </Route> 
+                    </Route>
+                    <Route exact path='/login'>
+                        {<Login/>}
+                    </Route>
+                    <Route exact path='/register'>
+                        {<NewUser/>}
+                    </Route>   
                 </Switch>
             <Footer/>
         </>
