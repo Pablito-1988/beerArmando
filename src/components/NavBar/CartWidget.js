@@ -10,7 +10,7 @@ const CartWidget = () => {
     const {cartItems ,removeItem } = useContext(CartContext);
     
     const [number,setNumber] = useState(cartItems.length)
-    console.log(cartItems)
+    
     useEffect(()=>{
         setNumber(cartItems.length)
     },[cartItems])
@@ -25,7 +25,7 @@ const CartWidget = () => {
                     <ul> 
 
                         {cartItems.map((item,index)=>{ 
-                            return <li className="dropbtn" >
+                            return <li key={index} className="dropbtn" >
                                 <div className='cartPreview'>
                                     <img className='cartListImg' src={item.Producto.Poster} alt="" />
                                     <div className='previewdata'>

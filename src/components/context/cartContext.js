@@ -12,8 +12,9 @@ const CustomeComponent =({children}) =>{
     const [cart, setCart] = useState([])
     const [word, setWord] = useState("space")
     const [cartItems, setCartItems] = useLocalStorage("cartItems", [])
-    console.log(cartItems)
-    
+   
+
+   
     //agrega elementos al carrito
     const addItem = (product,cantidad, precio) =>{
         
@@ -58,7 +59,7 @@ const CustomeComponent =({children}) =>{
          addItem : addItem,
          clear : clear,
          removeItem : removeItem,
-         search : search,
+         search : search,  
     } 
     return(
         <Provider value={cartContextValue}>

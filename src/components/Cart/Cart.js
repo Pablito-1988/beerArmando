@@ -8,7 +8,6 @@ import { firestore } from "../../firebase";
 
 const Cart = () => {
   const { cart ,cartItems , clear, removeItem } = useContext(CartContext);
-  console.log(cartItems); 
   const total = []
     const dias= []
     cartItems.forEach(item => {

@@ -1,14 +1,19 @@
 import './loginStyle.css'
 import { Formik, Form, ErrorMessage } from 'formik';
 import { firestore} from '../../firebase'
-import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useContext , useState } from 'react';
+import { UserContext } from "../context/userContext.js";
+import ErrorLogin from './ErrorLogin';
+import {useHistory} from 'react-router-dom'
 
 
 function Login() {
 
-    const [user, setUser] = useState(null)
-    console.log(user)
+    const { addUser } = useContext(UserContext);
+    const [error, setError] = useState(false);
+    const {push} = useHistory();
+    
 
     return(
         <div className='loginFormContainer'>
@@ -16,15 +21,16 @@ function Login() {
             <div className='loginContainer'>
             <h2 className='loginTitle'>Login</h2>
                 <div className='underline'></div>
+                {error ? <ErrorLogin /> : null}
             <Formik
                 initialValues={{
-                    user: '',
+                    email: '',
                     password: ''
                 }}
                 validate={(values)=>{
                     const errors = {}
-                    if (!values.user) {
-                        errors.user = 'Debes agregar un usuario valido'
+                    if (!values.email) {
+                        errors.email = 'Debes agregar un usuario valido'
                      }
                      if (!values.password) {
                         errors.password = 'Debes agregar una contraseña'
@@ -33,22 +39,33 @@ function Login() {
                     return errors
                 }}
                 onSubmit={(values)=>{
-                    setUser(values)
                     
-                    firestore.collection("users").add(values)
+                    console.log(values)
+                    const prom = firestore.collection("users").where('password', '==',values.password).get();
+                    prom
+                    .then((documento) => {
+                       let user =documento.docs[0].data()
+                       addUser(user.user)
+                       setError(false)
+                       push('/')
+                    })
+                    .catch(() => {
+                      console.log("no se cumplió la promesa");
+                      setError(true)
+                    });
                 }}
             >
               {({ handleChange, setFieldValue}) => ( 
                   <Form className='loginForm'>
-                    <label className='labelTitle'>Usuario</label>
+                    <label className='labelTitle'>Email</label>
                     <input
                         type='text'
                         onChange={handleChange}
-                        name="user"
+                        name="email"
                         id='user'
                         className='loginInput' />
 
-                    <ErrorMessage name='user' className='errors' component='span' />
+                    <ErrorMessage name='email' className='errors' component='span' />
 
                     <label>Password</label>
                     <input 
