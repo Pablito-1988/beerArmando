@@ -6,7 +6,8 @@ import { firestore } from "../../firebase";
 import Item from "../Item/Item";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Loadin from "../Loading/Loading";
+import { Link } from "react-router-dom";
+
 
 const Main = () => {
 
@@ -40,7 +41,7 @@ const Main = () => {
       <div className="">
         <div className="mainQuote">
           <h1> Volvé al pasado sin un delorean, alquilá un vhs</h1>
-
+          <i id='arrow' className="fas fa-arrow-circle-down"></i>
         </div>
         <div className="video">
           <video
@@ -55,8 +56,8 @@ const Main = () => {
         </div>
         <div className="mainContainer">
           <section>
-            <h1 className='mainSubTitle'>Más alquilados</h1>
-            <div data-aos='fade-left' className="mostSell">
+            <h1 id='link' className='mainSubTitle'>Más alquilados</h1>
+            <div data-aos='fade-right' className="mostSell">
               {info.filter((item) => item.Special === "most").map((item) => (<Item key={item.id} poster={item.Poster} id={item.id} titulo={item.Title} />))}
             </div>
           </section>

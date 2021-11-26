@@ -59,6 +59,7 @@ function Login() {
                   <Form className='loginForm'>
                     <label className='labelTitle'>Email</label>
                     <input
+                        placeholder='Ej: jose_feliz_pelota@gmail.com' 
                         type='text'
                         onChange={handleChange}
                         name="email"

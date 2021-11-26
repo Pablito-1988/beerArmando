@@ -3,6 +3,7 @@
     display: flex;
     background-image: url('../ItemDetail/backgroundImg.jpg');
     flex-direction: column;
+    min-height: 100vh;
     
 }
 
