@@ -73,12 +73,7 @@ video{
   
 }
 
-.new{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;     
-}
+
 
 .mainSubTitle{
     font-size:40px;
