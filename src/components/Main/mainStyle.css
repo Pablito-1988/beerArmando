@@ -28,6 +28,14 @@ video{
     height: 100vh;
     opacity: 0.5;
 }
+.mostSell{
+    display: flex;
+    justify-content: space-evenly;   
+}
+.new{
+    display: flex;
+    justify-content: space-evenly;   
+}
 
 @media (max-width: 425px) {
     .video{
@@ -40,6 +48,21 @@ video{
         color: red;
         margin-left: -20px
     }
+    .mostSell{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;  
+    }
+    .new{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;     
+    }
+    #arrow{
+        display: none;
+    }
 }
 .mainContainer{
     width: 100%;
@@ -49,13 +72,12 @@ video{
     background-color: black;
   
 }
-.mostSell{
-    display: flex;
-    justify-content: space-evenly;   
-}
+
 .new{
     display: flex;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;     
 }
 
 .mainSubTitle{
