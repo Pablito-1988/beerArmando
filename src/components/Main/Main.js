@@ -6,7 +6,7 @@ import { firestore } from "../../firebase";
 import Item from "../Item/Item";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+
 
 
 const Main = () => {
@@ -15,7 +15,7 @@ const Main = () => {
     Aos.init({ duration: 2000 });
   }, []);
   const [info, setInfo] = useState([]);
-  console.log(info)
+  
 
   useEffect(() => {
     const prom = firestore.collection("productos").where('Type','==','special').get();
