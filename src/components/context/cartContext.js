@@ -63,6 +63,7 @@ const CustomeComponent = ({ children }) => {
     cart: cart,
     cartItems: cartItems,
     word: word,
+    isInCart: isInCart,
     addItem: addItem,
     clear: clear,
     removeItem: removeItem,

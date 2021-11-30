@@ -45,7 +45,7 @@ function Login() {
                     prom
                     .then((documento) => {
                        let user =documento.docs[0].data()
-                       addUser(user.user)
+                       addUser(user)
                        setError(false)
                        push('/')
                     })

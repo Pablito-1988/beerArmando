@@ -1,13 +1,15 @@
 import "./cartStyle.css";
 import { useContext,useState } from "react";
 import { CartContext } from "../context/cartContext.js";
+
 import CartCounter from "./CartCounter";
 import SuccesBuy from "./SuccesBuy";
 import EmptyCart from "./EmptyCart";
 import { firestore } from "../../firebase";
 
 const Cart = () => {
-  const { cart ,cartItems , clear, removeItem } = useContext(CartContext);
+  const { cartItems , clear, removeItem } = useContext(CartContext);
+  
   const total = []
     const dias= []
     cartItems.forEach(item => {
@@ -27,7 +29,7 @@ const Cart = () => {
 
     const order ={
       buyer: user,
-      items : cart,
+      items : cartItems,
       date :  date,
       total : total[0]
     }

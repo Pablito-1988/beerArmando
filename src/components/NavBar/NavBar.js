@@ -2,14 +2,11 @@ import "./style.css";
 import logo from "./logo.jpg";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-/* import { useEffect } from "react"; */
 import { useContext } from "react";
-
 import { UserContext } from "../context/userContext";
 
 function NavBar() {
   const { user, clearUser } = useContext(UserContext);
-
 
   return (
     <>
@@ -54,9 +51,9 @@ function NavBar() {
             <Link to="/contacto">Contacto</Link>
           </button>
           <CartWidget />
-          {user.length > 0 ? (
+          {user.userName ? (
             <button className="dropbtn" onClick={() => clearUser()}>
-              {user} <i className="fas fa-sign-out-alt"></i>
+              {user.userName} <i className="fas fa-sign-out-alt"></i>
             </button>
           ) : (
             <button className="dropbtn">

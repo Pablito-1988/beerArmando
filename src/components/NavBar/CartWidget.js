@@ -31,7 +31,7 @@ const CartWidget = () => {
                                     <div className='previewdata'>
                                     <p>Titulo: {item.Producto.Title}</p>
                                     <p>Cantidad de dias: {item.Cantidad}.</p>
-                                    <p>Precio: ${item.Precio},00</p>
+                                    <p>Precio: ${item.Cantidad*80},00</p>
                                     <button className='deleteObjetPreview' onClick={()=>removeItem(item.Producto.id)}>Eliminar del carrito    <i id='trash' className="far fa-trash-alt"></i></button>
                                     </div>
                                 </div>

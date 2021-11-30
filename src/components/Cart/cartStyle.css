@@ -6,6 +6,9 @@
     min-height: 100vh;
     
 }
+.purchaseWithUser{
+    text-align: center;
+}
 
 .cartWrapper{
     display: flex;
