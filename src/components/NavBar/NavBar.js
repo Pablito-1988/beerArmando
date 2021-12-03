@@ -24,7 +24,7 @@ function NavBar() {
             </button>
             <div className="dropdown-content">
               <Link className="dropbtn" to="/category/movie">
-                Peliculas
+                Películas
               </Link>
               <Link className="dropbtn" to="/category/series">
                 Series
@@ -41,9 +41,9 @@ function NavBar() {
         </div>
         <nav>
           <div className="dropdown">
-            <button className="dropbtn">Categorias</button>
+            <button className="dropbtn">Categorías</button>
             <div className="dropdown-content">
-              <Link to="/category/movie">Peliculas</Link>
+              <Link to="/category/movie">Películas</Link>
               <Link to="/category/series">Series</Link>
             </div>
           </div>

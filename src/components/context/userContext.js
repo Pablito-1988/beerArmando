@@ -9,7 +9,7 @@ const { Provider } = UserContext
 const UserCustomComponent =({children}) =>{
 
     const [userLogged, setUserLogged] = useLocalStorage("user", [])
-    console.log(userLogged)
+    
     const addUser = (user) =>{
         let newUser = {
             userName: user.user,

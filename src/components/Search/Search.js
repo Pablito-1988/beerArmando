@@ -23,7 +23,7 @@ const Search = (params) => {
     return (
         <div className='search'>
             <form action=""onSubmit={searchWord}>
-            <input id='searchBar' ref={keyWord}  placeholder={`  Busca las ${category} que mas te gusten.`}  type="search" />
+            <input id='searchBar' ref={keyWord}  placeholder={`  Buscá las ${category} que más te gusten.`}  type="search" />
             <button className='searchButton'   type='submit'><i className="fas fa-search"></i></button> 
             </form>
         </div>

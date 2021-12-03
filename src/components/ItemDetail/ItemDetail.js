@@ -8,6 +8,7 @@ import { CartContext } from "../context/cartContext.js";
 const ItemDetail = (props) => {
   const movie = props.movie;
   console.log(movie)
+  
   const { push } = useHistory();
   const [mostrar, setMostrar] = useState(false);
   const { addItem  } = useContext(CartContext);
@@ -37,7 +38,7 @@ const ItemDetail = (props) => {
               <u>Premios:</u> {movie.Awards}
             </li>
             <li>
-              <u>Genero:</u> {movie.Genre}
+              <u>Género:</u> {movie.Genre}
             </li>
             <li>
               <u>Idioma original:</u> {movie.Language}
@@ -46,12 +47,12 @@ const ItemDetail = (props) => {
               <u>Duración:</u> {movie.Runtime}
             </li>
             <li>
-              <u>Año de lanzamiento:</u>
-              {movie.Year}
+              <u>Año de lanzamiento:</u> {movie.Released}
+                
             </li>
             <li>
-              <u>Rating IMDB:</u>
-              {movie.imdbRating}
+              <u>Rating IMDB:</u> {movie.imdbRating}
+              
             </li>
             <li>
               <u>Sinopsis:</u> {movie.Plot}

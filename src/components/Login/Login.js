@@ -40,7 +40,7 @@ function Login() {
                 }}
                 onSubmit={(values)=>{
                     
-                    console.log(values)
+                    
                     const prom = firestore.collection("users").where('password', '==',values.password).get();
                     prom
                     .then((documento) => {
@@ -79,7 +79,7 @@ function Login() {
                     <ErrorMessage name='password' className='errors' component='span' />
                     <div className='buttonsContainer'>
                         <button className='loginButton' type='submit'>Ingresar</button>
-                    <p className='newUserQuote'>Si no tienes un usuario podes registrarte aquí</p>
+                    <p className='newUserQuote'>Si no tienes un usuario podés registrarte aquí</p>
                         <Link to={'./register'} className='loginButton'>Crear usuario</Link>
                     </div>
 

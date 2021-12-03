@@ -55,7 +55,7 @@ function Contacto (){
                         
                             </div>
                             <div className='phoneField'>
-                                <label>Telefono</label>
+                                <label>Teléfono</label>
                                 <input
                                 type='tel'
                                 required
@@ -74,7 +74,7 @@ function Contacto (){
                                  name='text'
                                  id='text'
                                  className='text'
-                                 placeholder='Hola como les va :)'/> 
+                                 placeholder='Hola, cómo les va? :)'/> 
                             
                             </div>
                         <button className='contactSubmit' type='submit'>Enviar</button>                       

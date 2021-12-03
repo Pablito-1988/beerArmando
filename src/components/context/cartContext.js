@@ -13,7 +13,7 @@ const CustomeComponent = ({ children }) => {
 
   const addItem = (product, cantidad, precio) => {
     const item = isInCart(product);
-    console.log(item);
+    
     if (item >= 0) {
       setCart([
         ...cart,

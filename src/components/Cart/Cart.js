@@ -1,7 +1,6 @@
 import "./cartStyle.css";
 import { useContext,useState } from "react";
 import { CartContext } from "../context/cartContext.js";
-
 import CartCounter from "./CartCounter";
 import SuccesBuy from "./SuccesBuy";
 import EmptyCart from "./EmptyCart";
@@ -58,7 +57,7 @@ const Cart = () => {
     return (
       <>
       <div className="wrapper">
-          <h1 className='pageTitle'>Estas pelis estan a un paso de ser tuyas</h1>
+          <h1 className='pageTitle'>Estas pelis están a un paso de ser tuyas</h1>
         <div className="cartWrapper">
           {cartItems.length > 0 ?
           <> 
@@ -67,13 +66,13 @@ const Cart = () => {
             return (
               <div key={i} className="cartItem">
                 <div className="itemImg">
-                <img className='imageCover' src={item.Producto.Poster} alt="" />
+                <img className='cartImg' src={item.Producto.Poster} alt="" />
                 </div>
                 <div className="itemInfo">
-                  <h3>Titulo: {item.Producto.Title}</h3>
-                  <p className='itemInfop'>Descripcion: {item.Producto.Plot}</p>
+                  <h3>Título: {item.Producto.Title}</h3>
+                  <p className='itemInfop'>Descripción: {item.Producto.Plot}</p>
                   <p className='itemInfop'>Precio: ${item.Precio}.</p>
-                  <p className='itemInfop'>Total de dias con esta peli: {item.Cantidad}.</p>
+                  <p className='itemInfop'>Total de días con esta peli: {item.Cantidad}.</p>
                   <button className='deleteObjet' onClick={()=>removeItem(item.Producto.id)}>Eliminar de la lista  <i id='trash' className="far fa-trash-alt"></i></button>
                 </div>
               </div>

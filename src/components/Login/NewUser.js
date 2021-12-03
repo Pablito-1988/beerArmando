@@ -7,9 +7,9 @@ import NewUserSucces from './NewUserSucces';
 
 const NewUser = () => {
 
-    const [user, setUser] = useState(null)
+    
     const [login,setLogin] = useState(false)
-    console.log(user)
+    
     return (
         <div className='loginFormContainer'>
             {login && <NewUserSucces/>}
@@ -49,7 +49,7 @@ const NewUser = () => {
                     return errors
                 }}
                 onSubmit={(values)=>{
-                    setUser(values)
+                    
                     setLogin(true)
                     firestore.collection("users").add(values)
                 }}
