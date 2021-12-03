@@ -22,7 +22,7 @@ const SuccesBuy = (props) => {
             <h3 className='succesMsg'>Su orden de compra es la n° {id}</h3>
             <button className='succesBtn' onClick={idDelete()}> Volver al home </button>
             <p className='counter'>O sino esperá {counter} segundos , y serás teletransportado</p>
-            <iframe title='succes' src="https://giphy.com/embed/TOS8gBHBifK0" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <iframe title='succes' src="https://giphy.com/embed/TOS8gBHBifK0" width="480" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
    
         </div>
     )

@@ -5,7 +5,6 @@ import { UserContext } from "../context/userContext";
 
 const CartCounter = (props) => {
   const { user } = useContext(UserContext);
-  console.log(user)
   const form = useRef();
   const moreButton = useRef();
   const purchaseButton = useRef();
@@ -49,11 +48,9 @@ const CartCounter = (props) => {
             return errors;
           }}
           onSubmit={(values) => {
-            
               props.userData(values);
               form.current.style = "display: none";
               purchaseButton.current.style = "display: block";
-            
           }}
         >
           {({ handleChange }) => (

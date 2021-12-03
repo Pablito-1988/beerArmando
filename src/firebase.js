@@ -1,14 +1,14 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
-
+console.log(process.env.REACT_APP_apiKey)
 const firebaseConfig = {
-  apiKey: "AIzaSyCMNVeywtpZ19Rd9uuatTzRNHvbzGBNZ3U",
-  authDomain: "vhs-club.firebaseapp.com",
-  projectId: "vhs-club",
-  storageBucket: "vhs-club.appspot.com",
-  messagingSenderId: "613452163852",
-  appId: "1:613452163852:web:4ac7b64bfb96b9d2afb729"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket ,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 const app = firebase.initializeApp(firebaseConfig);
