@@ -1,4 +1,4 @@
-# El club del VHS
+#  El club del VHS
 Somos una web dedicada al alquiler de películas y series pero no en cualquier formato: contamos con un amplio catálogo íntegramente en formato VHS. 
 
 ![Imagen](gif.gif)
