@@ -33,14 +33,15 @@ Si en algún momento el usuario se arrepiente de algún producto puede eliminarl
 # Pasos clonar el proyecto
 
 ### 1. `git clone https://github.com/Pablito-1988/beerArmando.git`
-Esto lo que hace es clonar el repositorio de github.
+Para poder clonar el repositorio de github en tu pc.
 
 ### 2. `npm install`
-Esto lo que hace es instalar las dependencias requeridas para el correcto funcionamiento del proyecto, recordá siempre estar en la carpeta correcta!
+Para  instalar las dependencias requeridas para el correcto funcionamiento del proyecto, recordá siempre estar en la carpeta correcta!
 
 ### 3. `npm start`
-Esto lo que hace es iniciar el servidor para que puedas ver el proyecto funcionando.
-Abrí [http://localhost:3000](http://localhost:3000) para ver el proyecto en tu navegador.
+Inicia el servidor para que puedas ver el proyecto funcionando.
+
+Abrí [http://localhost:3000](http://localhost:3000) para ver el proyecto en tu navegador, si es que no tenes otro proyecto corriendo en dicho puerto. En ese caso React te sugiere otro puerto, por ejemplo: [http://localhost:3001](http://localhost:3001)
 
 # Dependencias agregadas 
 
