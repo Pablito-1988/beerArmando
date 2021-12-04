@@ -1,7 +1,8 @@
 # El club del VHS
 Somos una web dedicada al alquiler de películas y series pero no en cualquier formato: contamos con un amplio catálogo íntegramente en formato VHS. 
 
-![Main](Main.jpg)
+![Imagen](gif.gif)
+
 
 Link: Rama Master, que obtiene los datos de Firebase [https://vhsclub.herokuapp.com/](https://vhsclub.herokuapp.com/)
 
@@ -20,14 +21,16 @@ En el navbar encontramos el link de contacto que cuenta con un formulario comple
 
 Si agregamos productos al carrito logueados con nuestro usuario, debemos primero validar nuestros datos y luego hacer click en el botón “finalizar compra” para completarla.  
 
-
+## Video: 
 [![Video paso a paso ](case1.jpg)](https://vimeo.com/653075146)
 
 Si el usuario agrega productos al carrito sin estar logueado debe primero hacer click en el botón “Para finalizar agrega tus datos”. Una vez que complete el formulario con sus datos y los confirme podrá avanzar hacia “finalizar compra”.  
 
+## Video:
 [![Video paso a paso ](case2.jpg)](https://vimeo.com/653071444)
 
 Hay dos formas de eliminar productos del carrito: podemos hacerlo desde la preview del carrito que se encuentra en el navbar o bien ingresando al carrito. En esta segunda opción podemos eliminar de a uno o vaciar el carrito completo.  
+
 
 
 # Pasos clonar el proyecto
@@ -49,28 +52,28 @@ Abrí [http://localhost:3000](http://localhost:3000) para ver el proyecto en tu 
 
 # Dependencias agregadas 
 
-### `npm i react-loading`
+## `npm i react-loading`
 Dependecia utilizada para agregar logo de carga mientras se termina de realizar el fetch.
 
 Link: [https://www.npmjs.com/package/react-loading](https://www.npmjs.com/package/react-loading)
 
-### `npm i react-router-dom`
+## `npm i react-router-dom`
 Dependecia utilizada para generear un mecanismo de navegación en nuestra web.
 
 Link: [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start)
 
-### `npm install emailjs-com `
+## `npm install emailjs-com `
 Dependecia utilizada para el envío de e-mails para la sección de contacto.
 
 Link: [https://www.emailjs.com/docs/](https://www.emailjs.com/docs/)
 
-### `npm install formik --save`
+## `npm install formik --save`
 Dependecia utilizada para el manejo de formularios de la sección de login y carrito.
 
 Link: [https://formik.org/docs/overview](https://formik.org/docs/overview)
 
-### `npm install aos --save`
-Dependecia utilizada para animaciones con el scroll de la web.
+## `npm install aos --save`
+Dependecia utilizada para animaciones con el scroll de la home.
 
 Link: [https://www.npmjs.com/package/aos](https://www.npmjs.com/package/aos)
 
