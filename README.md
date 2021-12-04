@@ -10,24 +10,24 @@ Link: Rama Api, que obtiene los datos de la Api (con buscador funcinal) [https:/
 # Api de Peliculas (rama Api)
 
 Link: [https://www.omdbapi.com/](https://www.omdbapi.com/)
+
+
 # Flujo de Compra
 
-El usuario en la home puede encontrar tanto los últimos productos agregados, así como también los productos más vendidos. Cada uno de estos productos al clickearlos lo llevara al detalle del mismo, donde se puede modificar la cantidad de días que desea alquilar el VHS y agregar dicho producto al carrito. 
+En la home los usuarios ven los productos divididos en dos categorías: últimos agregados y más vendidos. Al hacer click sobre alguno de ellos se accede al detalle de la película o serie, desde donde se puede modificar la cantidad de días de alquiler del VHS y agregar el producto al carrito. 
 
-En el navbar encontramos el link de contacto, que cuenta con un formulario el cual es completamente funcional. Como también encontramos el link a la sección de usuarios, en la cual podemos crear un nuevo usuario o logearnos. 
+En el navbar encontramos el link de contacto que cuenta con un formulario completamente funcional. También está el link a la sección de usuarios, desde donde podemos crear un nuevo usuario o logearnos.  
 
-Una vez que se creó un usuario y este esté logueado y dentro del carrito con solo clikear en el botón de validar datos, y luego en el botón “finalizar compra”, se completa la misma. 
+Si agregamos productos al carrito logueados con nuestro usuario, debemos primero validar nuestros datos y luego hacer click en el botón “finalizar compra” para completarla.  
+
+
 [![Video paso a paso ](case1.jpg)](https://vimeo.com/653075146)
 
-O si el usuario no  está logueado, debe hace click en el botón de “Para finalizar agrega tus datos”, ahí se completa un formulario con los datos del usuario, luego se confirman dichos datos y luego se clickea en el botón “finalizar compra” para finalizar. 
+Si el usuario agrega productos al carrito sin estar logueado debe primero hacer click en el botón “Para finalizar agrega tus datos”. Una vez que complete el formulario con sus datos y los confirme podrá avanzar hacia “finalizar compra”.  
 
 [![Video paso a paso ](case2.jpg)](https://vimeo.com/653071444)
 
-Si en algún momento el usuario se arrepiente de algún producto puede eliminarlo desde el navbar, en el preview del carrito, o directamente ingresando al carrito y borrando aquellos productos que no quiera, o simplemente vaciando el carrito.   
-
-
-
-
+Hay dos formas de eliminar productos del carrito: podemos hacerlo desde la preview del carrito que se encuentra en el navbar o bien ingresando al carrito. En esta segunda opción podemos eliminar de a uno o vaciar el carrito completo.  
 
 
 # Pasos clonar el proyecto
@@ -35,13 +35,17 @@ Si en algún momento el usuario se arrepiente de algún producto puede eliminarl
 ### 1. `git clone https://github.com/Pablito-1988/beerArmando.git`
 Para poder clonar el repositorio de github en tu pc.
 
-### 2. `npm install`
+### 2. `cd beerArmando`
+Para posicionarse en el directorio donde se encuentra el proyecto.
+
+### 3. `npm i`
 Para  instalar las dependencias requeridas para el correcto funcionamiento del proyecto, recordá siempre estar en la carpeta correcta!
 
-### 3. `npm start`
+### 4. `npm start`
 Inicia el servidor para que puedas ver el proyecto funcionando.
 
 Abrí [http://localhost:3000](http://localhost:3000) para ver el proyecto en tu navegador, si es que no tenes otro proyecto corriendo en dicho puerto. En ese caso React te sugiere otro puerto, por ejemplo: [http://localhost:3001](http://localhost:3001)
+
 
 # Dependencias agregadas 
 
