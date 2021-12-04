@@ -14,7 +14,7 @@ function Contacto (){
 
     emailjs.sendForm('service_d8x5lfx','template_fiz3b0n', e.target,'user_R2WV8np2I5apUnVMFdjgE')
       .then((result) => {
-          console.log(result.text);
+          
       }, (error) => {
           console.log(error.text);
       });

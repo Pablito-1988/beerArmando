@@ -7,11 +7,27 @@ Link: Rama Master, que obtiene los datos de Firebase [https://vhsclub.herokuapp.
 
 Link: Rama Api, que obtiene los datos de la Api (con buscador funcinal) [https://beer-armando.herokuapp.com/](https://beer-armando.herokuapp.com/)
 
-
-
-# Api de Peliculas
+# Api de Peliculas (rama Api)
 
 Link: [https://www.omdbapi.com/](https://www.omdbapi.com/)
+# Flujo de Compra
+
+El usuario en la home puede encontrar tanto los últimos productos agregados, así como también los productos más vendidos. Cada uno de estos productos al clickearlos lo llevara al detalle del mismo, donde se puede modificar la cantidad de días que desea alquilar el VHS y agregar dicho producto al carrito. 
+
+En el navbar encontramos el link de contacto, que cuenta con un formulario el cual es completamente funcional. Como también encontramos el link a la sección de usuarios, en la cual podemos crear un nuevo usuario o logearnos. 
+
+Una vez que se creó un usuario y este esté logueado y dentro del carrito con solo clikear en el botón de validar datos, y luego en el botón “finalizar compra”, se completa la misma. 
+[![Video paso a paso ](case1.jpg)](https://vimeo.com/653075146)
+
+O si el usuario no  está logueado, debe hace click en el botón de “Para finalizar agrega tus datos”, ahí se completa un formulario con los datos del usuario, luego se confirman dichos datos y luego se clickea en el botón “finalizar compra” para finalizar. 
+
+[![Video paso a paso ](case2.jpg)](https://vimeo.com/653071444)
+
+Si en algún momento el usuario se arrepiente de algún producto puede eliminarlo desde el navbar, en el preview del carrito, o directamente ingresando al carrito y borrando aquellos productos que no quiera, o simplemente vaciando el carrito.   
+
+
+
+
 
 
 # Pasos clonar el proyecto
